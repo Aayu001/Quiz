@@ -1,5 +1,5 @@
-html {
-    background-color: #0077b6;
+body {
+    background-image:url('https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701915704-1200x675.jpg') ;
 }
 #navBar{
     display:flex;
@@ -7,19 +7,11 @@ html {
 }
 #mainName{
     text-align:center;
-    font-size: 50px;
+    font-size: 70px;
     color:aliceblue;
 }
-
-#login {
-    margin:20px 0 0;
-    width: 200px;
-    background-color: white;
-    border-radius: 5px;
-    border: black solid 2px;
-    padding: 5px 10px 5px;
-}
-
-#login label {
-    margin: 5px 0px 0px;
+#features{
+    border:2px solid white;
+    height:fit-content;
+    color:green;
 }
