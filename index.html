@@ -1,69 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AS |A Quiz conducting platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
 
 <body>
-    <Header>
+    <header>
         <nav id="navBar">
-            <span><a href="">Home</a></span><span><a href="">About Us</a></span><span><a href="">Contact Us</a></span>
+            <div class="menu">
+                <div class="logo">
+                    <a href="#">AS Quiz Platform</a>
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="loginPage.html">Sign in/up</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
         </nav>
-    </Header>
-
-    <section id="default">
-        <table style="width: 100%;">
-            <tr>
-                <td >
-                    <h1 id="mainName">Quiz Web Application</h1>
-                </td>
-                <td>
-                    <form action="https://www.google.com/" id="login">
-                        <label for="firstName">First Name</label><br>
-                        <input type="text" id="firstName" name="first"><br>
-                        <label for="lastName">Last Name</label><br>
-                        <input type="text" id="lastName" name="last"><br>
-                        <label for="email">Email</label><br>
-                        <input type="email" id="email" name="email"><br>
-                        <label for="password">Password</label><br>
-                        <input type="password" id="password" name="password"><br>
-                        <input type="checkbox" id="terms" required name="terms">
-                        <label for="terms">I agree to all the terms and conditions</label><br>
-                        <button>Sign up</button>
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </section>
-    <section id="features">
-        <span>
-        </span>
-        <span>
-
-        </span>
-        <span>
-        </span>
-    </section>
-
-    <section id="aboutUs">
-
-    </section>
-    <section id="howToUse">
-
-    </section>
-    <section id="contactUs">
-
-    </section>
-
-
-    <footer>
-
+    </header>
+    <div class="img"></div>
+    <div class="center">
+        <div class="title">AS</div>
+        <div class="btns">
+            <button>Learn More</button>
+            <button>Register</button>
+        </div>
+    </div>
+    <footer id="footer">
+        <div>
+            <ul id="pageFooter">
+                <li><a href="#">about us</a></li>
+                <li><a href="#">contact us</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
     </footer>
+    <script src="loginpage.js"></script>
 </body>
 
 </html>
