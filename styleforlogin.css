@@ -1,25 +1,31 @@
-body #loginPage{
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
 	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    align-content:center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	margin: -20px 0 50px;
 }
 
-#loginPage h1 {
+h1 {
 	font-weight: bold;
 	margin: 0;
 }
 
-#loginPage h2 {
+h2 {
 	text-align: center;
 }
 
-#loginPage p {
+p {
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 20px;
@@ -27,18 +33,18 @@ body #loginPage{
 	margin: 20px 0 30px;
 }
 
-#loginPage span {
+span {
 	font-size: 12px;
 }
 
-#loginPage a {
+a {
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
 }
 
-#loginPage button {
+button {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
@@ -51,20 +57,20 @@ body #loginPage{
 	transition: transform 80ms ease-in;
 }
 
-#loginPage button:active {
+button:active {
 	transform: scale(0.95);
 }
 
-#loginPage button:focus {
+button:focus {
 	outline: none;
 }
 
-#loginPage button.ghost {
+button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
 
-#loginPage form {
+form {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -75,7 +81,7 @@ body #loginPage{
 	text-align: center;
 }
 
-#loginPage input {
+input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -83,10 +89,8 @@ body #loginPage{
 	width: 100%;
 }
 
-#loginPage .container {
+.container {
 	background-color: #fff;
-    display:flex;
-    justify-content:center;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
@@ -97,31 +101,31 @@ body #loginPage{
 	min-height: 480px;
 }
 
-#loginPage .form-container {
+.form-container {
 	position: absolute;
 	top: 0;
 	height: 100%;
 	transition: all 0.6s ease-in-out;
 }
 
-#loginPage .sign-in-container {
+.sign-in-container {
 	left: 0;
 	width: 50%;
 	z-index: 2;
 }
 
-#loginPage .container.right-panel-active .sign-in-container {
+.container.right-panel-active .sign-in-container {
 	transform: translateX(100%);
 }
 
-#loginPage .sign-up-container {
+.sign-up-container {
 	left: 0;
 	width: 50%;
 	opacity: 0;
 	z-index: 1;
 }
 
-#loginPage .container.right-panel-active .sign-up-container {
+.container.right-panel-active .sign-up-container {
 	transform: translateX(100%);
 	opacity: 1;
 	z-index: 5;
@@ -140,7 +144,7 @@ body #loginPage{
 	}
 }
 
-#loginPage .overlay-container {
+.overlay-container {
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -151,11 +155,11 @@ body #loginPage{
 	z-index: 100;
 }
 
-#loginPage .container.right-panel-active .overlay-container{
+.container.right-panel-active .overlay-container{
 	transform: translateX(-100%);
 }
 
-#loginPage .overlay {
+.overlay {
 	background: #FF416C;
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
 	background: linear-gradient(to right, #FF4B2B, #FF416C);
@@ -171,11 +175,11 @@ body #loginPage{
 	transition: transform 0.6s ease-in-out;
 }
 
-#loginPage .container.right-panel-active .overlay {
+.container.right-panel-active .overlay {
   	transform: translateX(50%);
 }
 
-#loginPage .overlay-panel {
+.overlay-panel {
 	position: absolute;
 	display: flex;
 	align-items: center;
@@ -185,33 +189,34 @@ body #loginPage{
 	text-align: center;
 	top: 0;
 	height: 100%;
-	width: 40%;
+	width: 50%;
 	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
 }
 
-#loginPage .overlay-left {
+.overlay-left {
 	transform: translateX(-20%);
 }
 
-#loginPage .container.right-panel-active .overlay-left {
+.container.right-panel-active .overlay-left {
 	transform: translateX(0);
 }
 
-#loginPage .overlay-right {
+.overlay-right {
 	right: 0;
 	transform: translateX(0);
 }
 
-#loginPage .container.right-panel-active .overlay-right {
+.container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
 
-#loginPage .social-container {
+.social-container {
 	margin: 20px 0;
 }
 
-#loginPage .social-container a {
+.social-container a {
+	color:red;
 	border: 1px solid #DDDDDD;
 	border-radius: 50%;
 	display: inline-flex;
@@ -222,7 +227,7 @@ body #loginPage{
 	width: 40px;
 }
 
-#loginPage footer {
+footer {
     background-color: #222;
     color: #fff;
     font-size: 14px;
@@ -234,15 +239,15 @@ body #loginPage{
     z-index: 999;
 }
 
-#loginPage footer p {
+footer p {
     margin: 10px 0;
 }
 
-#loginPage footer i {
+footer i {
     color: red;
 }
 
-#loginPage footer a {
+footer a {
     color: #3c97bf;
     text-decoration: none;
 }
