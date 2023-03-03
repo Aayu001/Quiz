@@ -10,7 +10,6 @@
   background: #fff;
 }
 #navBar{
-  position: fixed;
   background: #264653;
   width: 100%;
   padding: 10px 0;
@@ -59,11 +58,11 @@ footer div{
     justify-content:center;
 }
 #pageFooter{
-    list-style: none;
+  list-style: none;
 padding:10px;
-    font-size:20px;
+  font-size:20px;
 }
 #pageFooter a {
-    color:white;
-    text-decoration:none;
+  color:white;
+  text-decoration:none;
 }

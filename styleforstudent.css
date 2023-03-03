@@ -2,3 +2,46 @@
     color:white;
     font-size:24px;
 }
+body{
+    box-sizing: border-box;
+}
+.grid-container{
+    margin:10px;
+    display:grid;
+    grid-template-columns: repeat(4,24%);
+    grid-gap: 10px;
+}
+.grid{box-sizing: border-box;
+    background-color: #354f52;
+    padding:10px;
+    border-radius: 10px;
+    position:relative;
+}
+.cir{
+    width:50%;
+    height:75%;
+    border-radius:50%;
+    position:absolute;
+    top:10%;
+    right:5%;
+
+}
+.leftMenu a{
+    color:white;
+    text-decoration:none;
+    transition:0.5s
+}
+.leftMenu{
+    width:0;
+    height:100%;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    background-color:#264653;
+    overflow:hidden;
+    transition:0.5s;
+}
+.leftMenu a:hover{color:black;
+    text-decoration:underline;
+}
