@@ -26,18 +26,27 @@ body{
     right:5%;
 
 }
-#openNav,#closeNav{
+#openNav{
     cursor:pointer;
-    font-size:30px;
+}
+#closeNav{position:absolute;
+    font-size:40px;
+    cursor:pointer;
+    top:0;
+    right:20px;
+    
 }
 .leftMenu a{
     color:white;
+    font-size:25px;
     text-decoration:none;
     transition:0.5s;
     display:block;
+    padding:5px 0 0 20px;
 }
 .leftMenu{
-    width:0px;
+    padding-top:60px;
+    width:30%;
     height:100%;
     position:fixed;
     z-index:1;
