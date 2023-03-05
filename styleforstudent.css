@@ -26,10 +26,12 @@ body{
     right:5%;
 
 }
-#openNav{
+.openNav,.openNav a{
+    color:white;
     cursor:pointer;
+    text-decoration: none;
 }
-#closeNav{position:absolute;
+.closeNav{position:absolute;
     font-size:40px;
     cursor:pointer;
     top:0;
@@ -46,7 +48,7 @@ body{
 }
 .leftMenu{
     padding-top:60px;
-    width:30%;
+    width:0;
     height:100%;
     position:fixed;
     z-index:1;
