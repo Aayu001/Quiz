@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleforhome.css">
-    <link rel="stylesheet" href="headerfooter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
 
 <body>
     <header>
-        <nav id="navBar">
+        <nav id="navBar" style="position:fixed">
             <div class="menu">
                 <div class="logo">
                     <a href="#">AS Quiz Platform</a>
@@ -30,7 +29,7 @@
         <div class="title">AS</div>
         <div class="btns">
             <button>Learn More</button>
-            <button>Register</button>
+            <a href="loginPage.html"><button>Register</button></a>
         </div>
     </div>
     <footer id="footer">
@@ -42,7 +41,13 @@
             </ul>
         </div>
     </footer>
-    <script src="loginpage.js"></script>
+    <script>
+        const scrol1 = document.querySelector("nav")
+        window.addEventListener("scroll", () => {
+            if (window.scrollY>= 10) { scrol1.classList.add("navBar") }
+            else { scrol1.classList.remove("navBar") }
+        })
+    </script>
 </body>
 
 </html>

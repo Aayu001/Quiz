@@ -18,21 +18,36 @@ body{
     position:relative;
 }
 .cir{
-    width:50%;
-    height:75%;
+    width:30%;
+    height:90%;
     border-radius:50%;
     position:absolute;
-    top:10%;
+    top:6%;
     right:5%;
 
 }
+.openNav,.openNav a{
+    color:white;
+    cursor:pointer;
+    text-decoration: none;
+}
+.closeNav{position:absolute;
+    font-size:40px;
+    cursor:pointer;
+    top:0;
+    right:20px;
+    
+}
 .leftMenu a{
     color:white;
+    font-size:25px;
     text-decoration:none;
     transition:0.5s;
     display:block;
+    padding:5px 0 0 20px;
 }
 .leftMenu{
+    padding-top:60px;
     width:0;
     height:100%;
     position:fixed;
