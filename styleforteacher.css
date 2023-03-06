@@ -14,20 +14,21 @@ body {
 }
 
 #menu {
-    padding: 10px;
+    
     font-size: 24px;
-    backdrop-filter: blur(5px);
 }
 
-.mainMenu {
+.mainMenu {padding: 20px 10px 5px 10px;
+    box-sizing: border-box;
     list-style: none;
     display: flex;
     text-align: center;
     justify-content: space-between;
+    backdrop-filter: blur(5px);
 }
 
 .rightMenu {
-    display: grid;
+    display:grid;
     grid-template-columns: 100px 100px;
 }
 .rightMenu button{
@@ -47,11 +48,16 @@ body {
     font-size: 35px;
 }
 
-.leftMenu {
+.leftMenu {z-index: 10;
+    position:fixed;
     height: 100%;
     width: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     transition: 0.6s;
     display: inline-block;
     list-style: none;
+    backdrop-filter: blur(5px);
+}
+.mainContent{
+    height:min(580px)
 }
