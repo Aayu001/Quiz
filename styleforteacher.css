@@ -6,20 +6,28 @@ html,
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color:#ac3b61;
 }
 
 body {
-    position:static;
-    background: url(Images/Home\ Background.jpg);
+    min-height: 100vh;
+  
+}
+
+button {
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
 }
 
 #menu {
-    position:sticky;
     font-size: 24px;
+background-color: #edc7b7;
 }
 
-.mainMenu {padding: 20px 10px 5px 10px;
+.mainMenu {
+    padding: 20px 10px 5px 10px;
     box-sizing: border-box;
     list-style: none;
     display: flex;
@@ -29,41 +37,50 @@ body {
 }
 
 .rightMenu {
-    display:grid;
+    display: grid;
     grid-template-columns: 100px 100px;
 }
-.rightMenu button{
-    width:50px;
-    height:50px;
+
+.rightMenu button {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    font-size:30px;
-    color:green;
+    font-size: 30px;
+    color: green;
 }
 
 .openNav,
 .closeNav {
     cursor: pointer;
+    transition:0.5s;
 }
-
+.hide,.show{
+    display:none;
+}
 .closeNav {
-    font-size: 35px;
+    font-size: 28px;
 }
 
-.leftMenu {z-index: 10;
-    position:fixed;
+.leftMenu {
+    z-index: 10;
+    margin:0 20px;
+    position: fixed;
     height: 100%;
     width: 0;
     overflow-x: hidden;
-    transition: 0.6s;
+    transition: 0.8s;
     display: inline-block;
     list-style: none;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
 }
-.mainContent{
-    height:min(580px);
+
+.mainContent {
+    height: min(580px);
+    background: #eee2dc;
 }
 #addClass{
     position:absolute;
+    display: flex;
     text-align: center;
     width:30%;
     height:65%;
@@ -71,76 +88,88 @@ body {
     display:flex;
     flex-direction: column;
     top:25%;
-    left:40%;
+    left:35%;
     border-radius: 10px;
     box-sizing: border-box;
+    visibility: hidden;
 }
 
-#addClass h2{
+#addClass.active {
+    visibility: visible;
+}
+
+#addClass h2 {
     font-family: 'Courier New', Courier, monospace;
-    font-size:30px;
-    padding:10px;
-    margin:10px;
-}
-#class input{
-    width:80%;
-    padding:10px;
-    height:40px;
-    margin:10px;
-    border-radius: 2px;
-    color:black;
-    font-size:16px;
-    border:none;
-}
-:focus{
-    outline:3px #ff99c8 solid;
-    animation-name:class;
-    animation-duration: 3s ;
-    animation-iteration-count:infinite;
+    font-size: 30px;
+    padding: 10px;
+    margin: 10px;
 }
 
-#class #btn{
-    position:absolute;
-    bottom:5%;
-    left:9%;
-    display:grid;
-    grid-template-columns: 80px 80px;
-    grid-column-gap: 115%;;
+#class input {
+    width: 80%;
+    padding: 10px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 2px;
+    color: black;
+    font-size: 16px;
+    border: none;
 }
 
-#btn button{
-    border-radius: 2px;
-    padding:5px;
-    background:green;
-    border:none;
-    transition:0.5s;
-}
-#btn button:hover{
+:focus {
+    outline: 3px #ff99c8 solid;
     animation-name: class;
-    animation-duration: 3s ;
-    animation-iteration-count:infinite;
-    outline:3px solid #ff99c8;
-    font-size: 15px;
-}
-@keyframes class {
-    0%{
-    outline-color:#ff99c8;
-}
-20%{
-    outline-color:#fcf6bd;
-}
-40%{
-    outline-color: #d0f4de;
-}
-60%{
-    outline-color: #a9def9;
-}
-80%{
-    outline-color:#e4c1f9;
-}
-100%{
-    outline-color: #ff99c8;
-}
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
+#class #btn {
+    position: absolute;
+    bottom: 5%;
+    left: 9%;
+    display: grid;
+    grid-template-columns: 80px 80px;
+    grid-column-gap: 115%;
+}
+
+#btn button {
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 14px;
+    background: green;
+    border: none;
+}
+
+#btn button:hover {
+    animation-name: class;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    outline: 3px solid #ff99c8;
+}
+
+@keyframes class {
+    0% {
+        outline-color: #ff99c8;
+    }
+
+    20% {
+        outline-color: #fcf6bd;
+    }
+
+    40% {
+        outline-color: #d0f4de;
+    }
+
+    60% {
+        outline-color: #a9def9;
+    }
+
+    80% {
+        outline-color: #e4c1f9;
+    }
+
+    100% {
+        outline-color: #ff99c8;
+    }
+}
 
