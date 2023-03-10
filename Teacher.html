@@ -10,50 +10,53 @@
     <link rel="stylesheet" href="styleforteacher.css">
 </head>
 
-<body class="gridContainer">
-    <header><nav id="menu">
-        <ul class="mainMenu">
-            <li><span class="openNav">&#9776;</span>
-                <a href="#" id="home">AS Quiz Platform</a>
-            </li>
-            <li>Teacher Dashboard</li>
-            <div class="rightMenu">
-                <li><button>+</button></li>
-                <li id="profile">Photo</li>
+<body class="">
+    <header>
+        <nav id="menu">
+            <ul class="mainMenu">
+                <li><span class="openNav">&#9776;</span>
+                    <span class="closeNav show">&times; </span>
+                    <a href="home.html" id="home"> AS Quiz Platform</a>
+                </li>
+                <li>Teacher Dashboard</li>
+                <div class="rightMenu">
+                    <li><button id="createClass">+</button></li>
+                    <li id="profile">Photo</li>
+                </div>
+            </ul>
+            <ul class="leftMenu">
+                <li><a href="#">Quizs</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="addClass">
+        <h2>Create Class</h2>
+        <form action="" id="class">
+            <input type="text" required placeholder="Class Name (Required)">
+            <input type="text" placeholder="Subject">
+            <input type="text"><br>
+            <div id="btn">
+                <button>Create</button>
+                <button id="classCancel">Cancel</button>
             </div>
-        </ul>
-        <ul class="leftMenu">
-            <li><div class="closeNav">&times;</div></li>
-            <li><a href="#">Quizs</a></li>
-            <li><a href="#">Classes</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </nav>
-</header>
-<div class="mainContent">
-</div>
-<div id="addClass">
-    <h2>Create Class</h2>
-    <form action="" id="class">
-        <input type="text" required placeholder="Class Name (Required)">
-        <input type="text" placeholder="Subject">
-        <input type="text"><br>
-        <div id="btn">
-        <button>Create</button>
-        <button>Cancel</button>
+        </form>
     </div>
-    </form>
-</div>
-<footer id="footer">
-    <div>
-        <ul id="pageFooter">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Feedback</a></li>
-        </ul>
+    <div class="mainContent">
     </div>
-</footer>
+
+    <footer id="footer">
+        <div>
+            <ul id="pageFooter">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="teacher.js"></script>
     <script src="student.js"></script>
 </body>
 
