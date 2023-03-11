@@ -20,7 +20,10 @@
                 </li>
                 <li>Teacher Dashboard</li>
                 <div class="rightMenu">
-                    <li><button id="createClass">+</button></li>
+                    <li>
+                        <!-- <button id="createClass">+</button> -->
+                        <svg id="createClass" focusable="true" width="30" height="30" viewBox="0 0 24 24" class=" NMm5M"><path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path></svg>
+                    </li>
                     <li id="profile">Photo</li>
                 </div>
             </ul>
@@ -32,6 +35,7 @@
             </ul>
         </nav>
     </header>
+    <div class="modal animate">
     <div id="addClass">
         <h2>Create Class</h2>
         <form action="" id="class">
@@ -39,23 +43,14 @@
             <input type="text" placeholder="Subject">
             <input type="text"><br>
             <div id="btn">
-                <button>Create</button>
                 <button id="classCancel">Cancel</button>
+                <button>Create</button>
             </div>
         </form>
     </div>
+</div>
     <div class="mainContent">
     </div>
-
-    <footer id="footer">
-        <div>
-            <ul id="pageFooter">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Feedback</a></li>
-            </ul>
-        </div>
-    </footer>
     <script src="teacher.js"></script>
     <script src="student.js"></script>
 </body>

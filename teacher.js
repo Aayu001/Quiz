@@ -1,5 +1,5 @@
 const addBtn=document.querySelector("#createClass")
-const addClass=document.querySelector("#addClass")
+const addClass=document.querySelector(".modal")
 const cancel=document.querySelector("#classCancel")
 const form=document.querySelector("#class")
 form.addEventListener("click",(event)=>{

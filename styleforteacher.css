@@ -25,7 +25,6 @@ a{
     font-size: 24px;
 background-color: #edc7b7;
 }
-
 .mainMenu {
     padding: 20px 10px 5px 10px;
     box-sizing: border-box;
@@ -41,12 +40,12 @@ background-color: #edc7b7;
     grid-template-columns: 100px 100px;
 }
 
-.rightMenu button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 30px;
-    color: green;
+#createClass{
+    border:none;
+}
+#createClass:hover{
+    border-radius:50%;
+    border:2px solid #ac3b61;
 }
 
 .openNav,
@@ -75,7 +74,7 @@ background-color: #edc7b7;
 }
 
 .mainContent {
-    height: min(580px);
+    height: min(670px);
     background: #eee2dc;
 }
 #addClass{
@@ -84,19 +83,42 @@ background-color: #edc7b7;
     text-align: center;
     width:30%;
     height:65%;
-    border:5px solid green;
+    border:3px solid #ac3b61;
     display:flex;
     flex-direction: column;
     top:25%;
     left:35%;
     border-radius: 10px;
     box-sizing: border-box;
-    visibility: hidden;
 }
+/* .animate{
+    
+} */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 99; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	backdrop-filter:blur(2px);/* Black w/ opacity */
+	padding-top: 60px;
+    animation:animateZoom 0.5s;
+  }
 
-#addClass.active {
-    visibility: visible;
+.modal.active {
+    display:block;
 }
+@keyframes animateZoom {
+    from{
+        transform:scale(0);
+    }  
+    to{
+        transform:scale(1);
+    }
+    }
 
 #addClass h2 {
     font-family: 'Courier New', Courier, monospace;
@@ -126,17 +148,17 @@ background-color: #edc7b7;
 #class #btn {
     position: absolute;
     bottom: 5%;
-    left: 9%;
+    right: 9%;
     display: grid;
     grid-template-columns: 80px 80px;
-    grid-column-gap: 115%;
+    grid-column-gap: 20px;
 }
 
 #btn button {
     border-radius: 2px;
     padding: 5px;
     font-size: 14px;
-    background: green;
+    background:goldenrod;
     border: none;
 }
 
