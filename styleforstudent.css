@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
 #title{
     color:white;
     font-size:24px;
@@ -14,7 +21,8 @@ body{
     height:min(590px);
     padding:20px;
 }
-.grid{box-sizing: border-box;
+.grid{
+    box-sizing: border-box;
     background-color: #354f52;
     padding:10px;
     border-radius: 10px;
@@ -27,6 +35,9 @@ body{
     position:absolute;
     top:6%;
     right:0;
+}
+.grid{
+ cursor:pointer;   
 }
 /* .openNav,.openNav a{
     color:white;
@@ -62,4 +73,57 @@ body{
 } */
 .leftMenu a:hover{color:black;
     text-decoration:underline;
+}
+.joinClass{
+    display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 99; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	backdrop-filter:blur(5px);/* Black w/ opacity */
+	padding-top: 60px;
+    animation:animateZoom 0.5s;
+    
+}
+.classBox{
+    position:absolute;
+    text-align:center;
+    padding:15px;
+    width:25%;
+    height:30%;
+    border:3px solid #ac3b61;
+    top:30%;
+    left:40%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(100,100,100,0.4);
+    box-sizing: border-box;
+}
+.joinClass.active{
+    display:block;
+}
+.classBox input{
+    font-size:15px;
+    border-radius: 5px;
+    margin:20px 30px;
+    padding:10px;
+    width:80%;
+    height:40px;
+    display:block;
+}
+.classBox #joinBtn{
+    position:absolute;
+    bottom:5%;
+    right:15%;
+    margin:20px 0 0 0;
+}
+#joinBtn button{
+    border-radius: 5px;
+    width: 80px;
+    font-size:16px;
+}
+#joinBtn button:nth-child(2n){
+    margin:0 0 0 10px;
 }

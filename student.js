@@ -12,3 +12,16 @@ close1.addEventListener("click",()=>{
     open1.classList.toggle("hide")
     close1.classList.toggle("show")
 })
+const addBtns=document.querySelector("#createClass")
+        const addClasses=document.querySelector(".joinClass")
+        const canc=document.querySelector("#cancel")
+        const f=document.querySelector("#class")
+        f.addEventListener("click",(event)=>{
+            event.preventDefault();
+        })
+        addBtns.addEventListener("click",()=>{
+            addClasses.classList.add("active")
+        })
+        canc.addEventListener("click",()=>{
+            addClasses.classList.remove("active")
+        })
