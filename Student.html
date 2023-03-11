@@ -6,27 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student|Dashboard</title>
-    <link rel="stylesheet" href="headerfooter.css">
+    <link rel="stylesheet" href="styleforteacher.css">
     <link rel="stylesheet" href="styleforstudent.css">
 </head>
 
 <body>
     <header>
-        <nav id="navBar">
-            <div class="menu">
-                <div class="leftMenu">
-                    <span class="closeNav">&times;</span>
-                    <a href="#">About</a></li>
-                    <a href="#">Contact Us</a></li>
+        <nav id="menu">
+            <ul class="mainMenu">
+                <li><span class="openNav">&#9776;</span>
+                    <span class="closeNav show">&times; </span>
+                    <a href="home.html" id="home"> AS Quiz Platform</a>
+                </li>
+                <li>Student Dashboard</li>
+                <div class="rightMenu">
+                    <li>
+                        <!-- <button id="createClass">+</button> -->
+                        <svg id="createClass" focusable="true" width="30" height="30" viewBox="0 0 24 24" class=" NMm5M"><path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path></svg>
+                    </li>
+                    <li id="profile">Photo</li>
                 </div>
-                <span class="openNav" style="font-size:30px;">&#9776;
-                    <a href="home.html">AS Quiz Platform</a>
-                </span>
-                <ul class="center">
-                    <li id="title"><span>Student Dashboard</span></li>
-                    <img style="width:45px;height:45px;" src="Images/profile.png" alt="">
-                </ul>
-            </div>
+            </ul>
+            <ul class="leftMenu">
+                <li><a href="#">Quizs</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
     <div id="mainContent">
