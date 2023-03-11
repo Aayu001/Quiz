@@ -11,7 +11,6 @@ html,
 
 body {
     min-height: 100vh;
-  
 }
 
 button {
@@ -23,10 +22,13 @@ a{
 
 #menu {
     font-size: 24px;
+    padding:0;
+    margin:0;
 background-color: #edc7b7;
 }
 .mainMenu {
-    padding: 20px 10px 5px 10px;
+    padding: 20px 10px;
+    margin:0px;
     box-sizing: border-box;
     list-style: none;
     display: flex;
@@ -58,20 +60,24 @@ background-color: #edc7b7;
 }
 .closeNav {
     font-size: 28px;
+    
 }
 
 .leftMenu {
     z-index: 10;
-    margin:0 20px;
-    position: fixed;
-    height: 100%;
-    width: 0;
-    overflow-x: hidden;
-    transition: 0.8s;
-    display: inline-block;
+    padding:20px;
+    position: absolute;
+    height: 670px;
+    width: 0px;
+    /* overflow-x: hidden; */
+    display:none;
+    transition: 0.6s;
     list-style: none;
+    background-color: #edc7b7;
+    box-sizing: border-box;
     /* backdrop-filter: blur(5px); */
 }
+
 
 .mainContent {
     height: min(670px);
@@ -91,9 +97,7 @@ background-color: #edc7b7;
     border-radius: 10px;
     box-sizing: border-box;
 }
-/* .animate{
-    
-} */
+
 .modal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */

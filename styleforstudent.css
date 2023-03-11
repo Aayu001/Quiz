@@ -28,7 +28,7 @@ body{
     top:6%;
     right:0;
 }
-.openNav,.openNav a{
+/* .openNav,.openNav a{
     color:white;
     cursor:pointer;
     text-decoration: none;
@@ -59,7 +59,7 @@ body{
     background-color:#264653;
     overflow:hidden;
     transition:0.5s;
-}
+} */
 .leftMenu a:hover{color:black;
     text-decoration:underline;
 }
