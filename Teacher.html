@@ -22,34 +22,52 @@
                 <div class="rightMenu">
                     <li>
                         <!-- <button id="createClass">+</button> -->
-                        <svg id="createClass" focusable="true" width="30" height="30" viewBox="0 0 24 24" class=" NMm5M"><path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path></svg>
+                        <svg id="createClass" focusable="true" width="30" height="30" viewBox="0 0 24 24"
+                            class=" NMm5M">
+                            <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
+                        </svg>
                     </li>
                     <li id="profile">Photo</li>
                 </div>
             </ul>
-            <ul class="leftMenu">
-                <li><a href="#">Quizs</a></li>
-                <li><a href="#">Classes</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+            <div class="leftMenu">
+                <ul>
+                    <li><a href="#">Quizs</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <div class="modal animate">
-    <div id="addClass">
-        <h2>Create Class</h2>
-        <form action="" id="class">
-            <input type="text" required placeholder="Class Name (Required)">
-            <input type="text" placeholder="Subject">
-            <input type="text"><br>
-            <div id="btn">
-                <button id="classCancel">Cancel</button>
-                <button>Create</button>
-            </div>
-        </form>
+        <div id="addClass">
+            <h2>Create Class</h2>
+            <form action="" id="class">
+                <input type="text" required placeholder="Class Name (Required)">
+                <input type="text" placeholder="Subject">
+                <input type="text"><br>
+                <div id="btn">
+                    <button id="classCancel">Cancel</button>
+                    <button>Create</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
     <div class="mainContent">
+        <div class="stats">
+            <span id="classStat">0<br>Total number of classes</span>
+            <span id="stuStat">0<br>Total number of Students(From all classes) </span>
+            <span id="QuStat">0<br>Total number of Quizes(From all classes) </span>
+        </div>
+        <div class="allClasses">
+            <div class="indClass">
+                Class Name<br>Section
+            </div>
+            <div class="indClass">
+                Class Name<br>Section
+            </div>
+        </div>
     </div>
     <script src="teacher.js"></script>
 </body>

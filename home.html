@@ -27,9 +27,8 @@
             </div>
         </nav>
     </header>
-    <div class="img"></div>
-    <div class="modal">
-        <div class="container animate" id="container">
+    <div class="modal animate">
+        <div class="container " id="container">
             <span id="closeLogin" class="animateClose" onclick="document.querySelector('.modal').style.display='none'">&times;</span>
             <div class="form-container sign-up-container">
                 <form action="#">
@@ -42,7 +41,11 @@
                     <span>or use your email for registration</span>
                     <input type="text" placeholder="Name" />
                     <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
+                    <input type="password" placeholder="Password"/>
+                    <!-- <select name="accType" id="type">
+                        <option value="Student">Student</option>
+                        <option value="Teacher">Teacher</option>
+                    </select> -->
                     <button>Sign Up</button>
                 </form>
             </div>
@@ -77,13 +80,21 @@
             </div>
         </div>
     </div>
-    <div class="center">
-        <div class="title">AS</div>
-        <div class="btns">
-            <button>Learn More</button>
-            <a><button onclick="document.querySelector('.modal').style.display='block'">Register</button></a>
-        </div>
-    </div>
+    <section class="first"><div class="img"></div>
+        <div class="center">
+            <div class="title">AS</div>
+            <div class="btns">
+                <button>Learn More</button>
+                <a href="Teacher.html"><button>Teacher</button></a>
+                <a href="Student.html"><button>Student</button></a>
+                <a><button onclick="document.querySelector('.modal').style.display='block'">Register</button></a>
+            </div>
+        </div></section>
+    <section class="second"></section>
+    <section class="third"></section>
+    <section class="forth"></section>
+    
+    
     <footer id="footer">
         <div>
             <ul id="pageFooter">
