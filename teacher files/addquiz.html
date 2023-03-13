@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz</title>
+    <link rel="stylesheet" href="addquiz.css">
+</head>
+
+<body>
+    <header>
+        <nav id="menu">
+            <ul class="mainMenu">
+                <li><span class="openNav">&#9776;</span>
+                    <span class="closeNav show">&times; </span>
+                    <a href="home.html" id="home"> AS Quiz Platform</a>
+                </li>
+                <li>Teacher Dashboard</li>
+                <li id="profile">Photo</li>
+                <!-- <div class="rightMenu">
+                    
+                </div> -->
+            </ul>
+            <div class="leftMenu">
+                <ul>
+                    <li><a href="#">Quizs</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="mainContent">
+        <div class="quizes">
+            <div class="quiz">
+                <form action="" id="addQuiz">
+                    <span>Add New Quiz</span>
+                    <input type="text" placeholder="Enter the Quiz Name" required name="qname">
+                    <input type="text" placeholder="Enter the Subject" name="subname">
+                    <a href=""><button class="adQuiz">+</button></a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="addquiz.js"></script>
+</body>
+
+</html>
