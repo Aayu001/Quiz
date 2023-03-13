@@ -17,4 +17,24 @@ const open1=document.querySelector(".openNav")
         })
 //for adding quiz
 const quizes=document.querySelector(".quizes")
-const form=document.querySelector("")
+const form=document.querySelector("#addQuiz")
+const inputQuiz=document.querySelector("#qname")
+const inputSub=document.querySelector("#subname")
+const addQuiz=document.querySelector(".adQuiz")
+form.addEventListener("click",(e)=>{
+e.preventDefault()
+})
+addQuiz.addEventListener("click",()=>{
+    console.log(inputQuiz.value,inputSub.value)
+const newQuiz=document.createElement("div")
+newQuiz.className="quiz"
+const newChild=document.createElement("span")
+const newChild2=document.createElement("span")
+newChild.className="quizname"
+newChild2.className="quizsubject"
+newChild.innerText=inputQuiz.value
+newChild2.innerText=inputSub.value
+newQuiz.appendChild(newChild)
+newQuiz.appendChild(newChild2)
+quizes.prepend(newQuiz)
+})
