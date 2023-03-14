@@ -32,3 +32,9 @@ addBtn.addEventListener("click",()=>{
 cancel.addEventListener("click",()=>{
     addClass.classList.remove("active")
 })
+
+//for redirectin to quiz page
+const toQuiz=document.querySelectorAll(".inClass")
+for (let q of toQuiz){
+    q.addEventListener("click",()=>window.location.href="www.google.com")
+}
