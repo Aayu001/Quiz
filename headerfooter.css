@@ -53,9 +53,8 @@ nav .menu{
   color: black;
 }
 footer div{
-    background-color:#264653;
-    display:flex;
-    justify-content:center;
+    background-color:#3c3d42;
+    float:left;
 }
 #pageFooter{
   list-style: none;
@@ -64,6 +63,6 @@ padding:10px;
   z-index:0;
 }
 #pageFooter a {
-  color:white;
+  color:#f6f8e2;
   text-decoration:none;
 }

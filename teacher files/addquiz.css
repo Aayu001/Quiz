@@ -6,7 +6,7 @@ html,
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: #eb5e28;
+    color: #f6f8e2;
 }
 button {
     cursor: pointer;
@@ -27,7 +27,7 @@ a {
 }
 
 .mainMenu {
-    background-color: #edc7b7;
+    background-color: #9ccd62;
     height:80px;
     padding: 20px 10px;
     margin: 0px;
@@ -68,7 +68,7 @@ a {
     overflow: hidden;
     transition: 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     box-sizing: border-box;
-    background-color: #edc7b7;
+    background-color: #9ccd62;
     /* backdrop-filter: blur(5px); */
 }
 .leftMenu ul{
@@ -85,7 +85,7 @@ a {
     height: min(89vh);
     box-sizing: border-box;
     padding:40px;
-    background: #eee2dc;
+    background: #e0ddca;
 }
 .mainContent.active{
     margin-left: 250px;
@@ -98,7 +98,7 @@ a {
     grid-gap:50px;
 }
 .quiz{
-    border:#ac3b61 3px solid;
+    background-color: #3c3d42;
     border-radius:20px;
     transition:0.3s;
     display:flex;
@@ -115,7 +115,6 @@ a {
     padding:10px;
     display:flex;
     flex-direction: column;
-    
 }
 .quiz form>span{
     font-size: 20px;
@@ -141,7 +140,7 @@ color:#6930c3;
     box-shadow: 0 0 3px 3px rgba(0,0,0,0.3);
 }
 .quiz form input{
-    border:#ac3b61 2px solid;
+    border:none;
     color:black;
     border-radius:8px;
     font-size: 16px;
@@ -157,9 +156,10 @@ color:#6930c3;
 }
 .quiz form button{
     position: absolute;
-    color:rgb(22, 187, 22);
+    color:green;
     top:48%;
     right:5%;
+    border:none;
     /* transform:translateY(-50%); */
     width:40px;
     height:40px;

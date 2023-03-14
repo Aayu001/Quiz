@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
+  color:#f6f8e2;
 }
 #title{
     color:white;
@@ -20,7 +21,7 @@ body{
 #mainContent{
     height:min(88.5vh);
     padding:40px;
-    background-color: #f1faee;
+    background-color: #E0ddca;
 }
 #mainContent.active{
     margin-left:250px;
@@ -28,7 +29,7 @@ body{
 }
 .grid{
     box-sizing: border-box;
-    background-color: #a2d2ff;
+    background-color: #3c3d42;
     padding:10px;
     border-radius: 10px;
     position:relative;

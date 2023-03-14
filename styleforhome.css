@@ -11,7 +11,8 @@
   background: #fff;
 }
 .navBar{
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
+  background-color: #3c3d42;
 }
 #navBar{
   width: 100%;
@@ -31,7 +32,7 @@ nav .menu{
   text-decoration: none;
   color: #fff;
   font-size: 35px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .menu ul{
   display: inline-flex;
@@ -46,7 +47,7 @@ nav .menu{
 .menu ul li a{
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   padding: 8px 15px;
   border-radius: 5px;
@@ -57,22 +58,22 @@ nav .menu{
   color: black;
 }
 footer div{
-    position:sticky;
-    left:0;
-    right:0;
-    bottom:0;
-    background-color:#264653;
-    display:flex;
-    justify-content:center;
+    width:100%;
+    background-color:#3c3d42;
+    /* display:flex;
+    justify-content:center; */
+    float:left;
 }
 #pageFooter{
   list-style: none;
 padding:10px;
-  font-size:20px;
+margin:0 40px;
+  
 }
 #pageFooter a {
-  color:white;
+  color:#f6f8e2;
   text-decoration:none;
+  font-size:18px;
 }
 /* Code for NavBar ends here*/
 /* .img{
@@ -90,7 +91,7 @@ section{
 .first{
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
-	animation: gradient 12s ease infinite;
+	animation: gradient 8s ease infinite;
 	height: 100vh;
 }
 @keyframes gradient {
