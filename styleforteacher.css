@@ -94,9 +94,9 @@ a {
     display:block;
 } */
 .mainContent {
-    height: min(88.5vh);
+    height: min(89vh);
     box-sizing: border-box;
-    background: #e0ddca;
+    background:url("/Quiz/Images/1.png");
 }
 .mainContent.active{
     margin-left: 250px;
@@ -190,7 +190,8 @@ box-shadow: 0 0 3px 3px rgba(0,0,0,0.3)
     text-align: center;
     width: 30%;
     height: 65%;
-    border: 3px solid #ac3b61;
+    background-color: #9ccd62;
+    /* border: 3px solid #ac3b61; */
     display: flex;
     flex-direction: column;
     top: 50%;
@@ -247,7 +248,7 @@ box-shadow: 0 0 3px 3px rgba(0,0,0,0.3)
     padding: 10px;
     height: 40px;
     margin: 10px;
-    border-radius: 2px;
+    border-radius: 10px;
     color: black;
     font-size: 16px;
     border: none;
@@ -270,10 +271,10 @@ box-shadow: 0 0 3px 3px rgba(0,0,0,0.3)
 }
 
 #btn button {
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 5px;
     font-size: 14px;
-    background: goldenrod;
+    background: #3c3d42;
     border: none;
 }
 

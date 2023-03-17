@@ -101,7 +101,7 @@ input {
    	overflow: auto; /* Enable scroll if needed */
 }
 .animate{
-	animation: animateZoom 0.6s;
+	animation: animateZoom 0.7s;
 }
 @keyframes animateZoom{
 	from{
