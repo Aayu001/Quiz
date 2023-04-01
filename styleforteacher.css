@@ -219,7 +219,7 @@ box-shadow: 0 0 3px 3px rgba(0,0,0,0.3)
     backdrop-filter: blur(2px);
     /* Black w/ opacity */
     padding-top: 60px;
-    animation: animateZoom 0.7s;
+    animation: animateZoom 0.7s ease;
 }
 
 .modal.active {
