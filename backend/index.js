@@ -3,7 +3,7 @@ const app = express()
 const mongoose = require("mongoose")
 const path = require("path")
 const Class = require("./models/class")
-const studentClass=require("./models/class")
+const StudentClass=require("./models/studentclass")
 
 function classCodegenerator(){
     return Math.random().toString(36).substr(2, 5);
@@ -35,24 +35,28 @@ app.post("/teacher/classes", async (req, res) => {
     await newClass.save()
     res.redirect("/teacher/classes")
 })
+app.get("/teacher/:ccode",(req,res)=>{
+    res.render("teacher/addquiz")
+})
 
+//request for student page
 app.get("/student/classes",async (req,res)=>{
-res.render("student/studentHome")
+    const allClasses=await StudentClass.find()
+res.render("student/studentHome",{allClasses})
 })
 
 app.post("/student/classes",async (req,res)=>{
-const {Code}=req.body
-const FoundClass=await Class.find({classCode:Code})
-let {classCode,cname,csub}= FoundClass.toObject()
-console.log(classCode)
-// if(FoundClass){
-//     let {classCode,cname,csub}= FoundClass
-//     const newStudentClass=new studentClass({classCode,cname,csub})
-//     await newStudentClass.save()
-//     res.redirect("/student/classes")
-// }else{
-//     console.log("Cannot Find Class")
-// }
+const {classCode}=req.body
+const FoundClass=await Class.findOne({classCode})
+console.log(FoundClass)
+if(FoundClass){
+    let {classCode,cname,csub}= FoundClass
+    const newStudentClass=new StudentClass({classCode,cname,csub})
+    await newStudentClass.save()
+    res.redirect("/student/classes")
+}else{
+    console.log("Cannot Find Class")
+}
 })
 
 

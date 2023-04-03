@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Dashboard</title>
-    <!-- <link rel="stylesheet" href="headerfooter.css"> -->
-    <link rel="stylesheet" href="/styleforteacher.css">
+    <title>Create Quiz</title>
+    <link rel="stylesheet" href="/addquiz.css">
 </head>
 
 <body>
@@ -18,7 +17,7 @@
                     <span class="closeNav show">&times; </span>
                     <a href="home.html" id="home"> AS Quiz Platform</a>
                 </li>
-                <li>Teacher Dashboard</li>
+                <li>Quizes</li>
                 <div class="rightMenu">
                     <li>
                         <!-- <button id="createClass">+</button> -->
@@ -29,6 +28,8 @@
                     </li>
                     <li id="profile">Photo</li>
                 </div>
+                <!-- <div class="rightMenu">   
+                </div> -->
             </ul>
             <div class="leftMenu">
                 <ul>
@@ -40,39 +41,40 @@
             </div>
         </nav>
     </header>
-    <div class="modal animate">
-        <div id="addClass">
-            <h2>Create Class</h2>
-            <form action="http://localhost:3000/teacher/classes" id="class" method="POST">
-                <input type="text" required placeholder="Class Name (Required)" name="cname">
-                <input type="text" placeholder="Subject" name="csub">
-                <input type="text" name="cdes"><br>
-                <div id="btn">
-                    <button id="classCancel">Cancel</button>
-                    <button>Create</button>
+    <div class="modal">
+        <div class="addQuiz">
+            <form action="" id="addQuiz">
+                <div id="head">Add New Quiz</div>
+                <label for="qname">Quiz Name :</label>
+                <input type="text" placeholder="Enter the Quiz Name" required name="qName" id="qname">
+                <br>
+                <label for="subname">Subject Name :</label>
+                <input type="text" placeholder="Enter the Subject"  required name="qSub" id="subname">
+                <br>
+                <label for="ques">Total Questions :</label>
+                <input type="number" name="qQuestions" id="ques" required>
+                <br>
+                <label for="marks">Total Marks :</label>
+                <input type="number" name="qMarks" id="marks" required>
+                <br>
+                <label for="time">Time Alloted(In Minutes) :</label>
+                <input type="number" name="qTime" id="time" required>
+                <div id="btns">
+                    <button id="cancel">Cancel</button>
+                    <button class="adQuiz">+</button>
                 </div>
             </form>
         </div>
     </div>
     <div class="mainContent">
-        <div class="stats">
-            <span id="classStat">0<br>Total number of classes</span>
-            <span id="stuStat">0<br>Total number of Students(From all classes) </span>
-            <span id="QuStat">0<br>Total number of Quizes(From all classes) </span>
-        </div>
-        <div class="allClasses">
-                <% for (let c of allClasses) {%>
-                    <a href="http://localhost:3000/teacher/<%=c.classCode%>">
-                    <div class="indClass">
-                    <%= c.cname %><br>
-                        <%= c.csub %><br>
-                        <%=c.classCode  %>
+        <span id="dir">Teacher>Quiz </span>
+        <div class="quizes">
+            <div class="quiz">
             </div>
-        </a>
-            <% } %>
         </div>
+
     </div>
-    <script src="/teacher.js"></script>
+    <script src="/addquiz.js"></script>
 </body>
 
 </html>

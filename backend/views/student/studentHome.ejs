@@ -42,10 +42,11 @@
     </header>
     <div id="mainContent">
         <div class="grid-container">
-            <div class="grid grid-item-1">
-                <b>Class Name</b><br>section<br>Teacher Name <img class="cir" src="/Images/profile.png" alt="">
+            <% for (let c of allClasses){ %>
+            <div class="grid">
+                <b><%=c.cname  %></b><br><%=c.csub  %><br>Teacher Name<br><%=c.classCode  %> <img class="cir" src="/Images/profile.png" alt="">
             </div>
-            
+            <% } %>
         </div>
     </div>
     <div class="joinClass">

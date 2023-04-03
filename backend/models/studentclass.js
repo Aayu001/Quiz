@@ -13,8 +13,7 @@ const classSchema= new mongoose.Schema({
         type:String,
         required:true
     },
-    cdes:String,
-    qCode:[String]
+    cdes:String
 })
-const Class=new mongoose.model("Class",classSchema)
-module.exports=Class
+const StudentClass=new mongoose.model("StudentClass",classSchema)
+module.exports=StudentClass
