@@ -310,3 +310,15 @@ box-shadow: 0 0 3px 3px rgba(0,0,0,0.3)
         outline-color: #ff99c8;
     }
 }
+span.copyTag{
+    pointer-events: none;
+}
+.cpy{
+    width:50px;
+    height:50px;
+    margin:0 40px;
+    padding:0 4px;
+    border-radius: 3px;
+    color:#3c3d42;
+    background-color:#d0f4de;
+}

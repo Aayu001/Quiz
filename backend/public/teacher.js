@@ -38,3 +38,22 @@ const toQuiz=document.querySelectorAll(".inClass")
 for (let q of toQuiz){
     q.addEventListener("click",()=>window.location.href="www.google.com")
 }
+
+// const anchor=document.querySelectorAll(".link")
+// const btns=document.querySelectorAll(".copyTag")
+
+
+//     for (let btn of btns){
+//         btn.addEventListener('click', function (e) {
+//             e.stopPropagation()
+//           })
+//         }
+
+// for(let a of anchor){
+//     a.addEventListener("click",e=>{
+//         e.target.nodeName==="span"&& cpy()
+            
+//     })
+// }
+
+

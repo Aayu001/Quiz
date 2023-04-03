@@ -62,11 +62,12 @@
         </div>
         <div class="allClasses">
                 <% for (let c of allClasses) {%>
-                    <a href="http://localhost:3000/teacher/<%=c.classCode%>">
+                    <a href="http://localhost:3000/teacher/<%=c.classCode%>" class="link">
                     <div class="indClass">
                     <%= c.cname %><br>
                         <%= c.csub %><br>
-                        <%=c.classCode  %>
+                        <span class="copyTag"><%=c.classCode  %></span>
+                        <!-- <span class="cpy">Copy</span> -->
             </div>
         </a>
             <% } %>

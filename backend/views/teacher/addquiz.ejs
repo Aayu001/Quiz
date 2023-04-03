@@ -43,7 +43,7 @@
     </header>
     <div class="modal">
         <div class="addQuiz">
-            <form action="" id="addQuiz">
+            <form action="http://localhost:3000/teacher/<%=ccode%>" id="addQuiz" method="post">
                 <div id="head">Add New Quiz</div>
                 <label for="qname">Quiz Name :</label>
                 <input type="text" placeholder="Enter the Quiz Name" required name="qName" id="qname">
@@ -52,13 +52,13 @@
                 <input type="text" placeholder="Enter the Subject"  required name="qSub" id="subname">
                 <br>
                 <label for="ques">Total Questions :</label>
-                <input type="number" name="qQuestions" id="ques" required>
+                <input type="number" name="qQuestions" id="ques" required placeholder="0">
                 <br>
                 <label for="marks">Total Marks :</label>
-                <input type="number" name="qMarks" id="marks" required>
+                <input type="number" name="qMarks" id="marks" required placeholder="0">
                 <br>
                 <label for="time">Time Alloted(In Minutes) :</label>
-                <input type="number" name="qTime" id="time" required>
+                <input type="number" name="qTime" id="time" required placeholder="0">
                 <div id="btns">
                     <button id="cancel">Cancel</button>
                     <button class="adQuiz">+</button>
@@ -69,8 +69,12 @@
     <div class="mainContent">
         <span id="dir">Teacher>Quiz </span>
         <div class="quizes">
+            <%for(let quiz of allQuizes)  {%>
             <div class="quiz">
+                Quiz Name : <%=quiz.qName  %> 
+                <br>Subject : <%=quiz.qSub  %>
             </div>
+        <% } %>
         </div>
 
     </div>

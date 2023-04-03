@@ -3,9 +3,10 @@ const app = express()
 const mongoose = require("mongoose")
 const path = require("path")
 const Class = require("./models/class")
-const StudentClass=require("./models/studentclass")
+const StudentClass = require("./models/studentclass")
+const Quiz = require("./models/quiz")
 
-function classCodegenerator(){
+function Codegenerator() {
     return Math.random().toString(36).substr(2, 5);
 }
 
@@ -24,39 +25,48 @@ app.use(express.urlencoded({ extended: true }))
 
 //requests for teacher pages
 app.get("/teacher/classes", async (req, res) => {
-    const allClasses=await Class.find()
-    res.render("teacher/teacherHome",{allClasses})
+    const allClasses = await Class.find()
+    res.render("teacher/teacherHome", { allClasses })
 })
 
 app.post("/teacher/classes", async (req, res) => {
     const { cname, csub, cdes } = req.body
-    const classCode=classCodegenerator()
-    const newClass = new Class({classCode, cname, csub, cdes })
+    const classCode = Codegenerator()
+    const newClass = new Class({ classCode, cname, csub, cdes })
     await newClass.save()
     res.redirect("/teacher/classes")
 })
-app.get("/teacher/:ccode",(req,res)=>{
-    res.render("teacher/addquiz")
+app.get("/teacher/:ccode", async (req, res) => {
+    const {ccode}=req.params
+    const allQuizes=await Quiz.find({ccode})
+    res.render("teacher/addquiz",{ccode,allQuizes})
 })
-
+app.post("/teacher/:ccode", async (req, res) => {
+    const { ccode } = req.params
+    const qCode = Codegenerator()
+    const { qName, qSub, qQues, qMarks, qTime } = req.body
+    const newQuiz = new Quiz({ ccode, qCode, qName, qSub, qQues, qMarks, qTime })
+    await newQuiz.save()
+    res.redirect(`${ccode}`)
+})
 //request for student page
-app.get("/student/classes",async (req,res)=>{
-    const allClasses=await StudentClass.find()
-res.render("student/studentHome",{allClasses})
+app.get("/student/classes", async (req, res) => {
+    const allClasses = await StudentClass.find()
+    res.render("student/studentHome", { allClasses })
 })
 
-app.post("/student/classes",async (req,res)=>{
-const {classCode}=req.body
-const FoundClass=await Class.findOne({classCode})
-console.log(FoundClass)
-if(FoundClass){
-    let {classCode,cname,csub}= FoundClass
-    const newStudentClass=new StudentClass({classCode,cname,csub})
-    await newStudentClass.save()
-    res.redirect("/student/classes")
-}else{
-    console.log("Cannot Find Class")
-}
+app.post("/student/classes", async (req, res) => {
+    const { classCode } = req.body
+    const FoundClass = await Class.findOne({ classCode })
+    console.log(FoundClass)
+    if (FoundClass) {
+        let { classCode, cname, csub } = FoundClass
+        const newStudentClass = new StudentClass({ classCode, cname, csub })
+        await newStudentClass.save()
+        res.redirect("/student/classes")
+    } else {
+        console.log("Cannot Find Class")
+    }
 })
 
 

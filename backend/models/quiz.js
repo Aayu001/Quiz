@@ -1,5 +1,9 @@
 const mongoose=require("mongoose")
 const quizSchema=new mongoose.Schema({
+    ccode:{
+        type:String,
+        required:true
+    },
     qCode:{
         type:String,
         required:true
