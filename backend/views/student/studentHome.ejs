@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Dashboard</title>
-    <!-- <link rel="stylesheet" href="headerfooter.css"> -->
-    <link rel="stylesheet" href="styleforteacher.css">
+    <title>Student|Dashboard</title>
+    <link rel="stylesheet" href="/styleforteacher.css">
+    <link rel="stylesheet" href="/styleforstudent.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
                     <span class="closeNav show">&times; </span>
                     <a href="home.html" id="home"> AS Quiz Platform</a>
                 </li>
-                <li>Teacher Dashboard</li>
+                <li>Student Dashboard</li>
                 <div class="rightMenu">
                     <li>
                         <!-- <button id="createClass">+</button> -->
@@ -39,35 +40,31 @@
             </div>
         </nav>
     </header>
-    <div class="modal animate">
-        <div id="addClass">
-            <h2>Create Class</h2>
-            <form action="http://localhost:3000/teacher/classes" id="class" method="POST">
-                <input type="text" required placeholder="Class Name (Required)" name="cname">
-                <input type="text" placeholder="Subject" name="csub">
-                <input type="text" name="cdes"><br>
-                <div id="btn">
-                    <button id="classCancel">Cancel</button>
-                    <button>Create</button>
-                </div>
-            </form>
+    <div id="mainContent">
+        <div class="grid-container">
+            <div class="grid grid-item-1">
+                <b>Class Name</b><br>section<br>Teacher Name <img class="cir" src="/Images/profile.png" alt="">
+            </div>
+            
         </div>
     </div>
-    <div class="mainContent">
-        <div class="stats">
-            <span id="classStat">0<br>Total number of classes</span>
-            <span id="stuStat">0<br>Total number of Students(From all classes) </span>
-            <span id="QuStat">0<br>Total number of Quizes(From all classes) </span>
-        </div>
-        <div class="allClasses">
-            <div class="indClass">
-                Class Name<br>Section
-            </div>
-            <div class="indClass">
-                Class Name<br>Section
+    <div class="joinClass">
+        <div class="classBox">
+            <h2>Join Class</h2>
+            <div id="classInfo">
+                <form id="class" action="http://localhost:3000/student/classes" method="post">
+                    <input type="text" placeholder="Enter the class code here" name="classCode" id="classCode" required>
+                    <div id="joinBtn">
+                        <button id="cancel">Cancel</button>
+                        <button>Join</button>
+                    </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <script src="teacher.js"></script>
+    <script src="/student.js">
+        </script>
 </body>
+
 </html>

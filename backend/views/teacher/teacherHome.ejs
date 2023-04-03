@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Dashboard</title>
     <!-- <link rel="stylesheet" href="headerfooter.css"> -->
-    <link rel="stylesheet" href="styleforteacher.css">
+    <link rel="stylesheet" href="/styleforteacher.css">
 </head>
 
 <body>
@@ -60,14 +61,16 @@
             <span id="QuStat">0<br>Total number of Quizes(From all classes) </span>
         </div>
         <div class="allClasses">
-            <div class="indClass">
-                Class Name<br>Section
+                <% for (let c of allClasses) {%>
+                    <div class="indClass">
+                    <%= c.cname %><br>
+                        <%= c.csub %><br>
+                        <%=c.classCode  %>
             </div>
-            <div class="indClass">
-                Class Name<br>Section
-            </div>
+            <% } %>
         </div>
     </div>
-    <script src="teacher.js"></script>
+    <script src="/teacher.js"></script>
 </body>
+
 </html>
