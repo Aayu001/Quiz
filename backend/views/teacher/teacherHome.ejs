@@ -27,7 +27,7 @@
                             <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
                         </svg>
                     </li>
-                    <li id="profile">Photo</li>
+                    <li id="profile"><img src="/profile.png" class="profilePic" alt=""></li>
                 </div>
             </ul>
             <div class="leftMenu">
@@ -54,19 +54,23 @@
             </form>
         </div>
     </div>
+    
     <div class="mainContent">
         <div class="stats">
             <span id="classStat">0<br>Total number of classes</span>
             <span id="stuStat">0<br>Total number of Students(From all classes) </span>
             <span id="QuStat">0<br>Total number of Quizes(From all classes) </span>
         </div>
+
         <div class="allClasses">
                 <% for (let c of allClasses) {%>
                     <a href="http://localhost:3000/teacher/<%=c.classCode%>" class="link">
-                    <div class="indClass">
-                    <%= c.cname %><br>
-                        <%= c.csub %><br>
-                        <span class="copyTag"><%=c.classCode  %></span>
+                    
+                        <div class="indClass">
+                        
+                    Class Name : <%= c.cname %><br>
+                       Subject : <%= c.csub %><br>
+                        <span class="copyTag"> Tag :<%=c.classCode  %></span>
                         <!-- <span class="cpy">Copy</span> -->
             </div>
         </a>

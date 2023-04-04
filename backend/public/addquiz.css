@@ -11,7 +11,12 @@ html,
 button {
     cursor: pointer;
 }
-
+.profilePic{
+    width:65px;
+    height:65px;
+    position: relative;
+    bottom:14px;
+}
 a {
     text-decoration: none;
 }
@@ -100,9 +105,11 @@ a {
     grid-gap:40px;
 }
 .quiz{
+    font-size: 17px;
     background-color: #3c3d42;
     border-radius:20px;
-    width:250px;
+    min-width:250px;
+    min-height: 120px;
     padding:5px;
     height:100px;
     transition:0.3s;

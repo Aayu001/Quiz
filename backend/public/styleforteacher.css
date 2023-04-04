@@ -9,6 +9,12 @@ html,
     color: #f6f8e2;
 }
 
+.profilePic{
+    width:65px;
+    height:65px;
+    position: relative;
+    bottom:14px;
+}
 button {
     cursor: pointer;
 }
@@ -96,7 +102,7 @@ a {
 .mainContent {
     height: min(89vh);
     box-sizing: border-box;
-    background:url("/Quiz/Images/1.png");
+    background:#e0ddca;
 }
 .mainContent.active{
     margin-left: 250px;
@@ -125,18 +131,26 @@ a {
 .stats span::first-letter{
     font-size: 24px;
 }
-
+#dir{
+    color:#3c3d42;
+    position:absolute;
+    top:12%;
+    margin-left:50px;
+    font-size: 24px;
+}
 .allClasses {
-    padding: 30px;
+    padding: 20px;
     margin:0 40px;
     display: grid;
-    gap: 50px;
-    grid-template-columns: repeat(5, 250px);
+    gap: 30px;
+    grid-template-columns: repeat(4, 300px);
 }
 
 .indClass {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
+    min-width: 225px;
+    min-height: 130px;
     cursor:pointer;
     box-sizing: border-box;
     background-color: #3c3d42;
@@ -202,7 +216,7 @@ box-shadow: 0 0 3px 3px rgba(0,0,0,0.3)
 }
 
 .modal {
-    display: none;
+    display:none;
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
@@ -219,6 +233,7 @@ box-shadow: 0 0 3px 3px rgba(0,0,0,0.3)
     backdrop-filter: blur(2px);
     /* Black w/ opacity */
     padding-top: 60px;
+    transition: all 0.7s;
     animation: animateZoom 0.7s ease;
 }
 

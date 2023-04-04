@@ -26,6 +26,8 @@ app.use(express.urlencoded({ extended: true }))
 //requests for teacher pages
 app.get("/teacher/classes", async (req, res) => {
     const allClasses = await Class.find()
+    // const count=allClasses.length()
+    // console.log(count)
     res.render("teacher/teacherHome", { allClasses })
 })
 
@@ -39,6 +41,7 @@ app.post("/teacher/classes", async (req, res) => {
 app.get("/teacher/:ccode", async (req, res) => {
     const {ccode}=req.params
     const allQuizes=await Quiz.find({ccode})
+    
     res.render("teacher/addquiz",{ccode,allQuizes})
 })
 app.post("/teacher/:ccode", async (req, res) => {
@@ -52,7 +55,13 @@ app.post("/teacher/:ccode", async (req, res) => {
 //request for student page
 app.get("/student/classes", async (req, res) => {
     const allClasses = await StudentClass.find()
+    
     res.render("student/studentHome", { allClasses })
+})
+app.get("/student/:ccode",async (req,res)=>{
+    const {ccode}=req.params
+    const allQuizes=await Quiz.find({ccode})
+    res.render("student/studentQuizes",{allQuizes})
 })
 
 app.post("/student/classes", async (req, res) => {
@@ -68,7 +77,6 @@ app.post("/student/classes", async (req, res) => {
         console.log("Cannot Find Class")
     }
 })
-
 
 
 app.get("*", (req, res) => {

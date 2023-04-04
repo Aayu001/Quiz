@@ -27,7 +27,7 @@
                             <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
                         </svg>
                     </li>
-                    <li id="profile">Photo</li>
+                    <li id="profile"><img class="profilePic" src="/profile.png" alt=""></li>
                 </div>
             </ul>
             <div class="leftMenu">
@@ -43,9 +43,11 @@
     <div id="mainContent">
         <div class="grid-container">
             <% for (let c of allClasses){ %>
+                <a href="http://localhost:3000/student/<%=c.classCode%>">
             <div class="grid">
-                <b><%=c.cname  %></b><br><%=c.csub  %><br>Teacher Name<br><%=c.classCode  %> <img class="cir" src="/Images/profile.png" alt="">
+                <b><%=c.cname  %></b><br><%=c.csub  %><br>(Teacher Name)<br><%=c.classCode  %> <img class="cir" src="/profile.png" alt="">
             </div>
+        </a>
             <% } %>
         </div>
     </div>

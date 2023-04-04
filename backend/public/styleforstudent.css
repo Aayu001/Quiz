@@ -6,6 +6,12 @@
   font-family: 'Poppins',sans-serif;
   color:#f6f8e2;
 }
+.profilePic{
+    width:65px;
+    height:65px;
+    position: relative;
+    bottom:14px;
+}
 #title{
     color:white;
     font-size:30px;
@@ -31,6 +37,8 @@ body{
     box-sizing: border-box;
     background-color: #3c3d42;
     padding:10px;
+    min-width: 250px;
+    min-height: 120px;
     border-radius: 10px;
     position:relative;
     cursor:pointer;  
@@ -42,7 +50,7 @@ box-shadow: 0 0 3px 3px rgba(0,0,0,0.3);
 }
 .cir{
     width:33%;
-    height:92%;
+    height:70%;
     border-radius:50%;
     position:absolute;
     top:6%;
