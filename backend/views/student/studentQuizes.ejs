@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student|Dashboard</title>
+    <link rel="stylesheet" href="/styleforteacher.css">
+    <link rel="stylesheet" href="/styleforstudent.css">
+</head>
+
+<body>
+    <header>
+        <nav id="menu">
+            <ul class="mainMenu">
+                <li><span class="openNav">&#9776;</span>
+                    <span class="closeNav show">&times; </span>
+                    <a href="home.html" id="home"> AS Quiz Platform</a>
+                </li>
+                <li>Quizes</li>
+                <li id="profile"><img src="/profile.png" class="profilePic" alt=""></li>
+            </ul>
+            <div class="leftMenu">
+                <ul>
+                    <li><a href="#">Quizs</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="mainContent">
+        <div class="grid-container">
+            <% for (let c of allQuizes){ %>
+                <a href="http://localhost:3000/student/<%=c.classCode%>">
+            <div class="grid">
+                <b>Name : <%=c.qName  %></b><br>Subect : <%=c.qSub  %><br>(Teacher Name) <img class="cir" src="/profile.png" alt="">
+            </div>
+        </a>
+            <% } %>
+        </div>
+    </div>
+    <script src="/student.js">
+    </script>
+</body>
+
+</html>

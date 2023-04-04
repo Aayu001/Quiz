@@ -114,7 +114,9 @@ section{
 }
 .second{
   background-color:#48cae4;
+  display:flex;
 }
+
 .third{
   background-color:#0096c7;
 }

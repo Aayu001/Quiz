@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student|Dashboard</title>
+    <link rel="stylesheet" href="/styleforteacher.css">
+    <link rel="stylesheet" href="/styleforstudent.css">
+</head>
+
+<body>
+    <header>
+        <nav id="menu">
+            <ul class="mainMenu">
+                <li><span class="openNav">&#9776;</span>
+                    <span class="closeNav show">&times; </span>
+                    <a href="home.html" id="home"> AS Quiz Platform</a>
+                </li>
+                <li>Student Dashboard</li>
+                <div class="rightMenu">
+                    <li>
+                        <!-- <button id="createClass">+</button> -->
+                        <svg id="createClass" focusable="true" width="30" height="30" viewBox="0 0 24 24"
+                            class=" NMm5M">
+                            <path d="M20 13h-7v7h-2v-7H4v-2h7V4h2v7h7v2z"></path>
+                        </svg>
+                    </li>
+                    <li id="profile"><img class="profilePic" src="/profile.png" alt=""></li>
+                </div>
+            </ul>
+            <div class="leftMenu">
+                <ul>
+                    <li><a href="#">Quizs</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="mainContent">
+        <div class="grid-container">
+            <% for (let c of allClasses){ %>
+                <a href="http://localhost:3000/student/<%=c.classCode%>">
+            <div class="grid">
+                <b><%=c.cname  %></b><br><%=c.csub  %><br>(Teacher Name)<br><%=c.classCode  %> <img class="cir" src="/profile.png" alt="">
+            </div>
+        </a>
+            <% } %>
+        </div>
+    </div>
+    <div class="joinClass">
+        <div class="classBox">
+            <h2>Join Class</h2>
+            <div id="classInfo">
+                <form id="class" action="http://localhost:3000/student/classes" method="post">
+                    <input type="text" placeholder="Enter the class code here" name="classCode" id="classCode" required>
+                    <div id="joinBtn">
+                        <button id="cancel">Cancel</button>
+                        <button>Join</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/student.js">
+        </script>
+</body>
+
+</html>

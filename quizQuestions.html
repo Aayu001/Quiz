@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styleforquiz.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navBar">
+            <ul class="tabs">
+                <li>(Teacher's Name)</li>
+                <li>Quiz Name (Subject Name)</li>
+                <li><img class="profilePic" src="/profile.png" alt=""></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <form action="" class="addQuestion">
+            <label for="ques" id="quesNo">Question No. </label> <br>
+            <textarea id="ques" name="ques" class="questions" cols="100" rows="2"></textarea><br>
+            <hr>
+            <div class="options">
+                <span>
+                <label for="op1">Option 1:</label>
+                <input type="text" id="op1"><br>
+            </span>
+            <span>    
+            <label for="op2">Option 2:</label>
+                <input type="text" id="op2"><br>
+                
+            </span>
+            <span>
+                <label for="op3">Option 3:</label>
+                <input type="text" id="op3"><br>
+               
+            </span>
+            <span>
+            <label for="op4">Option 4:</label>
+                <input type="text" id="op4">
+            </span>
+                <span class="ans">
+                    <label for="ans">Correct Option No.:</label>
+                    <input type="text" id="ans">
+                </span>
+            </div>
+        </form>
+    </div>
+    <footer class="bottomBar">
+        <div class="btns">
+            <span class="center-btns">
+                <button>Previous Question</button>
+                <button>Next Question</button>
+            </span>
+            <button>Cancel</button>
+            <a href=""><button>Submit</button></a>
+        </div>
+    </footer>
+    <script src="quizQuestions.js"></script>
+</body>
+
+</html>
