@@ -21,28 +21,43 @@
     </header>
     <div class="container">
         <form action="" class="addQuestion">
-            <label for="ques">Question No. </label> <br>
+            <label for="ques" id="quesNo">Question No. </label> <br>
             <textarea id="ques" name="ques" class="questions" cols="100" rows="2"></textarea><br>
             <hr>
-            <label for="op1">Option 1:</label>
-            <input type="text" id="op1"><br>
+            <div class="options">
+                <span>
+                <label for="op1">Option 1:</label>
+                <input type="text" id="op1"><br>
+            </span>
+            <span>    
             <label for="op2">Option 2:</label>
-            <input type="text" id="op2"><br>
-            <label for="op3">Option 3:</label>
-            <input type="text" id="op3"><br>
+                <input type="text" id="op2"><br>
+                
+            </span>
+            <span>
+                <label for="op3">Option 3:</label>
+                <input type="text" id="op3"><br>
+               
+            </span>
+            <span>
             <label for="op4">Option 4:</label>
-            <input type="text" id="op4">
-
+                <input type="text" id="op4">
+            </span>
+                <span class="ans">
+                    <label for="ans">Correct Option No.:</label>
+                    <input type="text" id="ans">
+                </span>
+            </div>
         </form>
     </div>
     <footer class="bottomBar">
         <div class="btns">
-            <div class="center-btns">
-                <button>Next Question</button>
+            <span class="center-btns">
                 <button>Previous Question</button>
-            </div>
+                <button>Next Question</button>
+            </span>
             <button>Cancel</button>
-            <a href=""><button>submit</button></a>
+            <a href=""><button>Submit</button></a>
         </div>
     </footer>
     <script src="quizQuestions.js"></script>

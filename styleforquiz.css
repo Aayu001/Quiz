@@ -34,17 +34,56 @@ header {
     display: flex;
     justify-content: space-between;
 }
-hr{
-    width:60%;
-}
-.container {
-    margin:20px;
-    padding:20px;
-    position:relative;
+
+hr {
+    width: 60%;
 }
 
-.btns{
-    position:absolute;
-    bottom:0;
-    right:0;
+.container {
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+#quesNo {
+    font-size: 24px;
+}
+
+#ques {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.options {
+    font-size: 18px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+}
+
+.options input {
+    border-radius: 10px;
+    margin: 5px;
+}
+.ans{
+    color:green;
+    margin-top:10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.btns {
+    margin: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.btns button {
+    font-size: 16px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.4)
 }
